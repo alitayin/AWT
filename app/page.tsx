@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
+  agoraTokenUrl,
   awtTokenUrl,
   contactUrl,
   estimateExamples,
@@ -45,8 +46,8 @@ export default function Home() {
           <div className="flex flex-col gap-7">
             <div className="flex flex-wrap gap-2">
               <Badge variant="secondary">1 AWT = 1 hour</Badge>
-              <Badge variant="outline">2.5M XEC per hour</Badge>
-              <Badge variant="outline">50% of my standard rate</Badge>
+              <Badge variant="outline">2.5M XEC, about $17 per hour</Badge>
+              <Badge variant="outline">65% off my standard rate</Badge>
             </div>
 
             <div className="flex flex-col gap-5">
@@ -56,8 +57,9 @@ export default function Home() {
               <p className="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
                 Alita Work Token is a project where Alita presells working time.
                 Each token represents one hour of work, priced at a fixed XEC
-                rate. The current price is 50% of my standard work rate, so with
-                XEC undervalued, buying my time early can be a practical and
+                rate. My standard rate is $50 per hour; the current AWT price is
+                2.5M XEC, about $17 per hour, which is roughly 65% off. With XEC
+                undervalued, buying my time early can be a practical and
                 high-leverage choice.
               </p>
             </div>
@@ -66,6 +68,10 @@ export default function Home() {
               <a href={awtTokenUrl} className={buttonVariants()}>
                 <ArrowUpRightIcon data-icon="inline-start" />
                 Open in Cashtab
+              </a>
+              <a href={agoraTokenUrl} className={buttonVariants()}>
+                <ArrowUpRightIcon data-icon="inline-start" />
+                View on Agora
               </a>
               <a
                 href="#services"
@@ -219,6 +225,10 @@ export default function Home() {
               <a href={awtTokenUrl} className={buttonVariants()}>
                 <ArrowUpRightIcon data-icon="inline-start" />
                 Cashtab token
+              </a>
+              <a href={agoraTokenUrl} className={buttonVariants()}>
+                <ArrowUpRightIcon data-icon="inline-start" />
+                Agora listing
               </a>
               <a
                 href={contactUrl}

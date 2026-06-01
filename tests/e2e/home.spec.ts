@@ -7,8 +7,13 @@ test("shows the AWT intro page and theme toggle", async ({ page }) => {
     page.getByRole("heading", { name: "Alita Work Token", exact: true }),
   ).toBeVisible();
   await expect(page.getByText("1 AWT = 1 hour").first()).toBeVisible();
-  await expect(page.getByText("2.5M XEC / hour").first()).toBeVisible();
-  await expect(page.getByText("50% of my standard rate").first()).toBeVisible();
+  await expect(
+    page.getByText("2.5M XEC, about $17 / hour").first(),
+  ).toBeVisible();
+  await expect(
+    page.getByText("65% off my standard rate").first(),
+  ).toBeVisible();
+  await expect(page.getByText("$50 / hour").first()).toBeVisible();
   await expect(page.getByText("50 AWT").first()).toBeVisible();
   await expect(page.getByText("200 AWT").first()).toBeVisible();
   await expect(page.getByText("What you can buy")).toBeVisible();
@@ -19,6 +24,9 @@ test("shows the AWT intro page and theme toggle", async ({ page }) => {
   await expect(
     page.getByRole("link", { name: "Cashtab token" }),
   ).toHaveAttribute("href", /cashtab\.com/);
+  await expect(
+    page.getByRole("link", { name: "View on Agora" }),
+  ).toHaveAttribute("href", /agora\.cash/);
   await expect(page.locator("html")).toHaveClass(/dark/);
   await expect(
     page.getByRole("button", { name: "Switch to light mode" }),

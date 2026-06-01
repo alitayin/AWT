@@ -1,6 +1,6 @@
 # Alita Work Token
 
-Alita Work Token is a one-page Next.js site for Alita's working-time presale. Each AWT represents one hour of Alita's work at a fixed rate of 2.5M XEC per hour, currently positioned as 50% of Alita's standard work rate, with a 50-hour weekly consumption cap and 200 AWT representing one working month.
+Alita Work Token is a one-page Next.js site for Alita's working-time presale. Each AWT represents one hour of Alita's work at a fixed rate of 2.5M XEC, about $17 per hour, currently positioned as 65% off Alita's standard $50/hour work rate, with a 50-hour weekly consumption cap and 200 AWT representing one working month.
 
 The site is built with Next.js, TypeScript, shadcn, Tailwind CSS, pnpm, light/dark mode, unit tests, Playwright coverage, and the local agent harness copied from the project template.
 

@@ -1,6 +1,9 @@
 export const awtTokenUrl =
   "https://cashtab.com/#/token/4d428e29ae4d098e9acd6e5a517fdc07aa4e061cd18a1981c935106dc7ab1bb0";
 
+export const agoraTokenUrl =
+  "https://www.agora.cash/4d428e29ae4d098e9acd6e5a517fdc07aa4e061cd18a1981c935106dc7ab1bb0";
+
 export const contactUrl = "https://t.me/alitayin";
 
 export const tokenFacts = [
@@ -14,11 +17,15 @@ export const tokenFacts = [
   },
   {
     label: "Rate",
-    value: "2.5M XEC / hour",
+    value: "2.5M XEC, about $17 / hour",
   },
   {
     label: "Current deal",
-    value: "50% of my standard rate",
+    value: "65% off my standard rate",
+  },
+  {
+    label: "Standard rate",
+    value: "$50 / hour",
   },
   {
     label: "Minimum",
