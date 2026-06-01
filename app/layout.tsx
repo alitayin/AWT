@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AlitaToken",
-  description: "A strict Next.js, shadcn, Tailwind CSS, and pnpm starter.",
+  title: "Alita Work Token",
+  description: "Alita Work Token presells Alita's working time in XEC.",
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

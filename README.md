@@ -1,6 +1,8 @@
-# alitatoken
+# Alita Work Token
 
-AlitaToken is a Next.js frontend repository initialized with shadcn, Tailwind CSS, TypeScript, pnpm, local Claude harness rules, unit tests, Playwright coverage, and GitHub workflow templates.
+Alita Work Token is a one-page Next.js site for Alita's working-time presale. Each AWT represents one hour of Alita's work at a fixed rate of 2.5M XEC per hour, currently positioned as 50% of Alita's standard work rate, with a 50-hour weekly consumption cap and 200 AWT representing one working month.
+
+The site is built with Next.js, TypeScript, shadcn, Tailwind CSS, pnpm, light/dark mode, unit tests, Playwright coverage, and the local agent harness copied from the project template.
 
 ## Quick Start
 
@@ -10,22 +12,22 @@ AlitaToken is a Next.js frontend repository initialized with shadcn, Tailwind CS
 pnpm install
 ```
 
-2. Install the Playwright browser used by local E2E runs:
-
-```bash
-pnpm exec playwright install --with-deps chromium
-```
-
-3. Start the app:
+2. Start the app:
 
 ```bash
 pnpm dev
 ```
 
-4. Run the default verification suite:
+3. Run the default verification suite:
 
 ```bash
 pnpm verify
+```
+
+4. Run browser tests with the locally installed Chrome:
+
+```bash
+pnpm test:e2e
 ```
 
 5. Opt into the local Claude harness:
@@ -46,6 +48,9 @@ cp .claude/settings.local.example.json .claude/settings.local.json
 
 ## Repository Map
 
+- `app/page.tsx`: the public AWT introduction page.
+- `lib/awt.ts`: public content, service areas, and estimate examples.
+- `components/theme-toggle.tsx`: light/dark mode control.
 - `CLAUDE.md`: project map and rules for Claude Code.
 - `AGENT.md`: shared rules for coding agents.
 - `docs/PRODUCT.md`: product intent and current v1 scope.

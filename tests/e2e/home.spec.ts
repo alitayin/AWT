@@ -1,19 +1,29 @@
 import { expect, test } from "@playwright/test";
 
-test("shows the initialized harness board and checklist", async ({ page }) => {
+test("shows the AWT intro page and theme toggle", async ({ page }) => {
   await page.goto("/");
 
   await expect(
-    page.getByRole("heading", {
-      name: "AlitaToken starts with a strict delivery harness.",
-    }),
+    page.getByRole("heading", { name: "Alita Work Token", exact: true }),
   ).toBeVisible();
+  await expect(page.getByText("1 AWT = 1 hour").first()).toBeVisible();
+  await expect(page.getByText("2.5M XEC / hour").first()).toBeVisible();
+  await expect(page.getByText("50% of my standard rate").first()).toBeVisible();
+  await expect(page.getByText("50 AWT").first()).toBeVisible();
+  await expect(page.getByText("200 AWT").first()).toBeVisible();
+  await expect(page.getByText("What you can buy")).toBeVisible();
+  await expect(page.getByAltText("Alita profile")).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "t.me/alitayin" }),
+  ).toHaveAttribute("href", /t\.me\/alitayin/);
+  await expect(
+    page.getByRole("link", { name: "Cashtab token" }),
+  ).toHaveAttribute("href", /cashtab\.com/);
 
-  await page.getByRole("button", { name: "Verification" }).click();
-  await expect(page.getByText("Unit test checkpoint")).toBeVisible();
+  await page.getByRole("button", { name: "Switch to dark mode" }).click();
 
-  await page.getByRole("button", { name: "Show checklist" }).click();
-  await expect(page.getByTestId("verification-checklist")).toContainText(
-    "pnpm test:e2e",
-  );
+  await expect(page.locator("html")).toHaveClass(/dark/);
+  await expect(
+    page.getByRole("button", { name: "Switch to light mode" }),
+  ).toBeVisible();
 });
