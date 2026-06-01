@@ -7,13 +7,15 @@ test("shows the AWT intro page and theme toggle", async ({ page }) => {
     page.getByRole("heading", { name: "Alita Work Token", exact: true }),
   ).toBeVisible();
   await expect(page.getByText("1 AWT = 1 hour").first()).toBeVisible();
-  await expect(
-    page.getByText("2.5M XEC, about $17 / hour").first(),
-  ).toBeVisible();
+  await expect(page.getByText("2.5M XEC / hour").first()).toBeVisible();
   await expect(
     page.getByText("65% off my standard rate").first(),
   ).toBeVisible();
   await expect(page.getByText("$50 / hour").first()).toBeVisible();
+  await expect(page.getByText("4d428e29...c7ab1bb0")).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Copy token ID" }),
+  ).toBeVisible();
   await expect(page.getByText("50 AWT").first()).toBeVisible();
   await expect(page.getByText("200 AWT").first()).toBeVisible();
   await expect(page.getByText("What you can buy")).toBeVisible();

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowUpRightIcon, Clock3Icon, MessageCircleIcon } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
+import { TokenIdCopy } from "@/components/token-id-copy";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -18,6 +19,8 @@ import {
   contactUrl,
   estimateExamples,
   serviceAreas,
+  tokenId,
+  tokenIdShort,
   tokenFacts,
 } from "@/lib/awt";
 
@@ -46,7 +49,7 @@ export default function Home() {
           <div className="flex flex-col gap-7">
             <div className="flex flex-wrap gap-2">
               <Badge variant="secondary">1 AWT = 1 hour</Badge>
-              <Badge variant="outline">2.5M XEC, about $17 per hour</Badge>
+              <Badge variant="outline">2.5M XEC per hour</Badge>
               <Badge variant="outline">65% off my standard rate</Badge>
             </div>
 
@@ -58,7 +61,7 @@ export default function Home() {
                 Alita Work Token is a project where Alita presells working time.
                 Each token represents one hour of work, priced at a fixed XEC
                 rate. My standard rate is $50 per hour; the current AWT price is
-                2.5M XEC, about $17 per hour, which is roughly 65% off. With XEC
+                2.5M XEC per hour, which is roughly 65% off. With XEC
                 undervalued, buying my time early can be a practical and
                 high-leverage choice.
               </p>
@@ -117,6 +120,17 @@ export default function Home() {
           aria-label="Token facts"
           className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
         >
+          <Card>
+            <CardHeader>
+              <CardDescription>Token ID</CardDescription>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <CardTitle className="font-mono text-sm">
+                  {tokenIdShort}
+                </CardTitle>
+                <TokenIdCopy tokenId={tokenId} />
+              </div>
+            </CardHeader>
+          </Card>
           {tokenFacts.map((fact) => (
             <Card key={fact.label}>
               <CardHeader>

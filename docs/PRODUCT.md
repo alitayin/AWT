@@ -1,6 +1,6 @@
 # Product Intent
 
-Alita Work Token is a public introduction page for a working-time presale. Each AWT represents one hour of Alita's work, priced at a fixed rate of 2.5M XEC, about $17 per hour, currently framed as 65% off Alita's standard $50/hour work rate.
+Alita Work Token is a public introduction page for a working-time presale. Each AWT represents one hour of Alita's work, priced at a fixed rate of 2.5M XEC, currently framed as 65% off Alita's standard $50/hour work rate.
 
 ## V1 Scope
 

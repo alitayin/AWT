@@ -1,8 +1,11 @@
-export const awtTokenUrl =
-  "https://cashtab.com/#/token/4d428e29ae4d098e9acd6e5a517fdc07aa4e061cd18a1981c935106dc7ab1bb0";
+export const tokenId =
+  "4d428e29ae4d098e9acd6e5a517fdc07aa4e061cd18a1981c935106dc7ab1bb0";
 
-export const agoraTokenUrl =
-  "https://www.agora.cash/4d428e29ae4d098e9acd6e5a517fdc07aa4e061cd18a1981c935106dc7ab1bb0";
+export const tokenIdShort = `${tokenId.slice(0, 8)}...${tokenId.slice(-8)}`;
+
+export const awtTokenUrl = `https://cashtab.com/#/token/${tokenId}`;
+
+export const agoraTokenUrl = `https://www.agora.cash/${tokenId}`;
 
 export const contactUrl = "https://t.me/alitayin";
 
@@ -17,7 +20,7 @@ export const tokenFacts = [
   },
   {
     label: "Rate",
-    value: "2.5M XEC, about $17 / hour",
+    value: "2.5M XEC / hour",
   },
   {
     label: "Current deal",
