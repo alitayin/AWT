@@ -1,0 +1,38 @@
+name: Delivery task
+description: Define work that Claude or a human can execute against a clear acceptance contract.
+title: "[Task] "
+labels:
+  - claude-ready
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Goal
+      description: What user or business outcome should change?
+      placeholder: Describe the concrete result this task should produce.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Write the proof a reviewer should expect.
+      placeholder: |
+        - [ ] The page shows ...
+        - [ ] `pnpm verify` passes
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and context
+      description: Note any scope limits, files to avoid, or compatibility concerns.
+      placeholder: Mention non-goals, product constraints, or rollout notes.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Expected validation
+      description: Which commands or screenshots should come back with the PR?
+      placeholder: |
+        - `pnpm verify`
+        - UI screenshot of the updated state
