@@ -77,29 +77,27 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mx-auto flex w-full max-w-xs flex-col gap-3 lg:mx-0">
-            <Image
-              src="/awt-token.svg"
-              alt="Alita Work Token mark"
-              width={640}
-              height={640}
-              priority
-              className="aspect-square w-full rounded-xl border bg-card"
-            />
+          <div className="mx-auto w-full max-w-xs lg:mx-0">
             <Card>
-              <CardContent className="flex items-center gap-3 pt-4">
+              <CardContent className="flex flex-col gap-4 pt-4">
                 <Image
                   src="/profile.png"
                   alt="Alita profile"
-                  width={64}
-                  height={64}
-                  className="size-16 shrink-0 rounded-lg object-cover"
+                  width={720}
+                  height={720}
+                  priority
+                  className="aspect-square w-full rounded-lg object-cover"
                 />
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-medium">Alita</p>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-medium">Alita</p>
+                    <p className="truncate text-xs text-muted-foreground">
+                      Work time presale
+                    </p>
+                  </div>
                   <a
                     href={contactUrl}
-                    className="truncate text-sm text-muted-foreground hover:text-foreground"
+                    className="shrink-0 text-sm text-muted-foreground hover:text-foreground"
                   >
                     t.me/alitayin
                   </a>

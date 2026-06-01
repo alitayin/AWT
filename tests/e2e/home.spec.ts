@@ -19,11 +19,15 @@ test("shows the AWT intro page and theme toggle", async ({ page }) => {
   await expect(
     page.getByRole("link", { name: "Cashtab token" }),
   ).toHaveAttribute("href", /cashtab\.com/);
-
-  await page.getByRole("button", { name: "Switch to dark mode" }).click();
-
   await expect(page.locator("html")).toHaveClass(/dark/);
   await expect(
     page.getByRole("button", { name: "Switch to light mode" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Switch to light mode" }).click();
+
+  await expect(page.locator("html")).not.toHaveClass(/dark/);
+  await expect(
+    page.getByRole("button", { name: "Switch to dark mode" }),
   ).toBeVisible();
 });
