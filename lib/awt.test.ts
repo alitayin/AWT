@@ -15,9 +15,13 @@ describe("AWT content", () => {
         expect.objectContaining({ value: "1 AWT = 1 hour" }),
         expect.objectContaining({ value: "2.5M XEC / hour" }),
         expect.objectContaining({ value: "65% off my standard rate" }),
-        expect.objectContaining({ value: "$50 / hour" }),
         expect.objectContaining({ value: "50 AWT" }),
         expect.objectContaining({ value: "200 AWT" }),
+      ]),
+    );
+    expect(tokenFacts).not.toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ label: "Standard rate" }),
       ]),
     );
     expect(tokenId).toHaveLength(64);

@@ -11,7 +11,8 @@ test("shows the AWT intro page and theme toggle", async ({ page }) => {
   await expect(
     page.getByText("65% off my standard rate").first(),
   ).toBeVisible();
-  await expect(page.getByText("$50 / hour").first()).toBeVisible();
+  await expect(page.getByText("Standard rate", { exact: true })).toHaveCount(0);
+  await expect(page.getByText("$50 / hour")).toHaveCount(0);
   await expect(page.getByText("4d428e29...c7ab1bb0")).toBeVisible();
   await expect(
     page.getByRole("button", { name: "Copy token ID" }),

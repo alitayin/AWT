@@ -27,10 +27,6 @@ export const tokenFacts = [
     value: "65% off my standard rate",
   },
   {
-    label: "Standard rate",
-    value: "$50 / hour",
-  },
-  {
     label: "Minimum",
     value: "4 AWT",
   },

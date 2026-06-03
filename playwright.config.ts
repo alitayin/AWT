@@ -10,7 +10,8 @@ export default defineConfig({
     trace: "on-first-retry",
   },
   webServer: {
-    command: "pnpm exec next dev --hostname 127.0.0.1 --port 40123",
+    command:
+      "pnpm build && pnpm exec next start --hostname 127.0.0.1 --port 40123",
     env: {
       NO_PROXY: "127.0.0.1,localhost",
       no_proxy: "127.0.0.1,localhost",
