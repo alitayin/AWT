@@ -30,14 +30,6 @@ export const tokenFacts = [
     label: "Minimum",
     value: "4 AWT",
   },
-  {
-    label: "Weekly cap",
-    value: "50 AWT",
-  },
-  {
-    label: "Monthly block",
-    value: "200 AWT",
-  },
 ] as const;
 
 export const serviceAreas = [
